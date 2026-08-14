@@ -30,7 +30,6 @@
         headerToggle();
       }
     });
-
   });
 
   /**
@@ -164,7 +163,6 @@
         }
       }, false);
     });
-
   });
 
   /**
@@ -221,9 +219,77 @@
       } else {
         navmenulink.classList.remove('active');
       }
-    })
+    });
   }
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
+
+  /**
+   * Telegram Contact Form Handler
+   */
+  const contactForm = document.querySelector('#contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // ==========================================
+      // ISI DENGAN TOKEN & CHAT ID TELEGRAM ANDA:
+      const botToken = '8362256070:AAEcK3iDFvZbqOiouqftVdxA7TQdGootLHU';
+      const chatId = '5518693229';
+      // ==========================================
+
+      const thisForm = this;
+      const loading = thisForm.querySelector('.loading');
+      const errorMessage = thisForm.querySelector('.error-message');
+      const sentMessage = thisForm.querySelector('.sent-message');
+      const submitBtn = thisForm.querySelector('button[type="submit"]');
+
+      const name = thisForm.querySelector('input[name="name"]').value;
+      const email = thisForm.querySelector('input[name="email"]').value;
+      const subject = thisForm.querySelector('input[name="subject"]').value;
+      const message = thisForm.querySelector('textarea[name="message"]').value;
+
+      const text = `📬 *Pesan Baru dari Website Portofolio!*\n\n` +
+                   `👤 *Nama:* ${name}\n` +
+                   `📧 *Email:* ${email}\n` +
+                   `📌 *Subject:* ${subject}\n` +
+                   `📝 *Pesan:*\n${message}`;
+
+      loading.classList.add('d-block');
+      errorMessage.classList.remove('d-block');
+      sentMessage.classList.remove('d-block');
+      submitBtn.disabled = true;
+
+      fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: text,
+          parse_mode: 'Markdown'
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        loading.classList.remove('d-block');
+        submitBtn.disabled = false;
+
+        if (data.ok) {
+          sentMessage.classList.add('d-block');
+          thisForm.reset();
+        } else {
+          throw new Error(data.description || 'Gagal mengirim pesan');
+        }
+      })
+      .catch((error) => {
+        loading.classList.remove('d-block');
+        submitBtn.disabled = false;
+        errorMessage.innerHTML = error.message;
+        errorMessage.classList.add('d-block');
+      });
+    });
+  }
 
 })();
