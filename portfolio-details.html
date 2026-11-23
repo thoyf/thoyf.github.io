@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio Details - MyResume Bootstrap Template</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>Portfolio Details - Mukhamad Anang Thoyfur</title>
+  <meta content="Technical Case Study - IT Infrastructure & Network Engineering" name="description">
+  <meta content="Network Engineer, IT Infrastructure, MikroTik, VLAN, ISO 27001, Semarang" name="keywords">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -26,33 +26,22 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: MyResume
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="portfolio-details-page">
 
   <header id="header" class="header d-flex flex-column justify-content-center">
-
     <i class="header-toggle d-xl-none bi bi-list"></i>
-
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+        <li><a href="index.html#portfolio" class="active"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="index.html#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+        <li><a href="index.html#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
     </nav>
-
   </header>
 
   <main class="main">
@@ -62,19 +51,19 @@
       <div class="container">
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li class="current" id="breadcrumb-title">Project Details</li>
           </ol>
         </nav>
-        <h1>Portfolio Details</h1>
+        <h1 id="page-heading">Project Details</h1>
       </div>
     </div><!-- End Page Title -->
 
     <!-- Portfolio Details Section -->
     <section id="portfolio-details" class="portfolio-details section">
-
       <div class="container" data-aos="fade-up">
 
+        <!-- Image Slider -->
         <div class="portfolio-details-slider swiper init-swiper">
           <script type="application/json" class="swiper-config">
             {
@@ -95,75 +84,42 @@
               }
             }
           </script>
-          <div class="swiper-wrapper align-items-center">
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/app-1.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/product-1.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/branding-1.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-              <img src="assets/img/portfolio/books-1.jpg" alt="">
-            </div>
-
+          <div class="swiper-wrapper align-items-center" id="project-slider-wrapper">
+            <!-- Slide gambar akan diisi otomatis oleh JavaScript -->
           </div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
           <div class="swiper-pagination"></div>
         </div>
 
+        <!-- Project Content & Metadata -->
         <div class="row justify-content-between gy-4 mt-4">
 
           <div class="col-lg-8" data-aos="fade-up">
             <div class="portfolio-description">
-              <h2>This is an example of portfolio details</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
-              <p>
-                Amet consequatur qui dolore veniam voluptatem voluptatem sit. Non aspernatur atque natus ut cum nam et. Praesentium error dolores rerum minus sequi quia veritatis eum. Eos et doloribus doloremque nesciunt molestiae laboriosam.
-              </p>
+              <h2 id="project-title">Loading Project...</h2>
+              <p id="project-overview"></p>
 
-              <div class="testimonial-item">
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-                <div>
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                </div>
-              </div>
+              <h4 class="mt-4">1. Challenge & Operational Requirements</h4>
+              <p id="project-challenge"></p>
 
-              <p>
-                Impedit ipsum quae et aliquid doloribus et voluptatem quasi. Perspiciatis occaecati earum et magnam animi. Quibusdam non qui ea vitae suscipit vitae sunt. Repudiandae incidunt cumque minus deserunt assumenda tempore. Delectus voluptas necessitatibus est.
-              </p>
+              <h4 class="mt-4">2. Technical Implementation</h4>
+              <ul id="project-solution-list"></ul>
 
-              <p>
-                Sunt voluptatum sapiente facilis quo odio aut ipsum repellat debitis. Molestiae et autem libero. Explicabo et quod necessitatibus similique quis dolor eum. Numquam eaque praesentium rem et qui nesciunt.
-              </p>
-
+              <h4 class="mt-4">3. Outcome & Impact</h4>
+              <p id="project-outcome"></p>
             </div>
           </div>
 
           <div class="col-lg-3" data-aos="fade-up" data-aos-delay="100">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3>Project Information</h3>
               <ul>
-                <li><strong>Category</strong> Web design</li>
-                <li><strong>Client</strong> ASU Company</li>
-                <li><strong>Project date</strong> 01 March, 2020</li>
-                <li><strong>Project URL</strong> <a href="#">www.example.com</a></li>
-                <li><a href="#" class="btn-visit align-self-start">Visit Website</a></li>
+                <li><strong>Category</strong> <span id="meta-category">-</span></li>
+                <li><strong>Client / Environment</strong> <span id="meta-client">-</span></li>
+                <li><strong>Role</strong> <span id="meta-role">-</span></li>
+                <li><strong>Technologies</strong> <span id="meta-tech">-</span></li>
+                <li><a href="index.html#portfolio" class="btn-visit align-self-start"><i class="bi bi-arrow-left"></i> Back to Portfolio</a></li>
               </ul>
             </div>
           </div>
@@ -171,33 +127,19 @@
         </div>
 
       </div>
-
     </section><!-- /Portfolio Details Section -->
 
   </main>
 
   <footer id="footer" class="footer position-relative light-background">
     <div class="container">
-      <h3 class="sitename">Brandon Johnson</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <h3 class="sitename">Mukhamad Anang Thoyfur</h3>
+      <p>IT Infrastructure & Network Engineer.</p>
       <div class="social-links d-flex justify-content-center">
-        <a href=""><i class="bi bi-twitter-x"></i></a>
-        <a href=""><i class="bi bi-facebook"></i></a>
-        <a href=""><i class="bi bi-instagram"></i></a>
-        <a href=""><i class="bi bi-skype"></i></a>
-        <a href=""><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Alex Smith</strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distribuited by <a href="https://themewagon.com">ThemeWagon</a>
-        </div>
+        <a href="https://linkedin.com/in/anang-thoyfur" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:anang.thoyfur@gmail.com"><i class="bi bi-envelope"></i></a>
+        <a href="https://wa.me/+6287719664564" target="_blank"><i class="bi bi-telephone"></i></a>
+        <a href="https://maps.app.goo.gl/u3JpLSEBoS5X4kam9" target="_blank"><i class="bi bi-geo-alt"></i></a>
       </div>
     </div>
   </footer>
@@ -210,19 +152,229 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Main JS File -->
+  <!-- Dynamic Portfolio Data Script -->
+  <script>
+    const portfolioProjects = {
+      "iso-infra": {
+        title: "Enterprise Infrastructure & ISO 27001 Hardening",
+        category: "IT Infrastructure",
+        client: "PT Mitracomm Ekasarana (Semarang)",
+        role: "IT Infrastructure Engineer",
+        tech: "ISO 27001 Controls, VLAN, Firewall, Linux/Windows Server, Virtualization",
+        images: [
+          { src: "assets/img/portfolio/infra-iso27001-1.jpg", caption: "Foto 1: Rack server produksi dengan penataan kabel dan pelabelan sesuai standar audit." },
+          { src: "assets/img/portfolio/infra-iso27001-2.jpg", caption: "Foto 2: Perangkat firewall & core switch untuk segmentasi zona jaringan internal." }
+        ],
+        overview: "Pengelolaan dan penguatan infrastruktur TI skala enterprise untuk mendukung operasional bisnis kritis yang menuntut ketersediaan tinggi dan kepatuhan standar keamanan informasi ISO 27001.",
+        challenge: "Kebutuhan untuk menjaga stabilitas sistem dan melindungi aset data perusahaan dari risiko keamanan internal maupun eksternal tanpa mengganggu kelancaran akses operasional harian lintas divisi.",
+        solutions: [
+          "Menerapkan segmentasi jaringan ketat menggunakan VLAN dan aturan firewall berbasis prinsip least-privilege.",
+          "Melakukan server hardening pada lingkungan Linux dan Windows Server serta penjadwalan patch rutin.",
+          "Menyusun dokumentasi aset, prosedur kontrol akses, dan pencatatan log untuk memenuhi audit ISO 27001."
+        ],
+        outcome: "Berhasil mempertahankan tingkat ketersediaan sistem (uptime) di angka 99% serta menurunkan insiden keamanan jaringan dan data sebesar 30%."
+      },
+      "microwave-indosat": {
+        title: "Point-to-Point Microwave Radio Backhaul Installation",
+        category: "Network Engineer",
+        client: "Indosat M2 (Freelance Project)",
+        role: "Field Network Engineer",
+        tech: "Microwave Radio Outdoor Unit (ODU), Indoor Unit (IDU), RF Alignment, Coaxial/PoE",
+        images: [
+          { src: "assets/img/portfolio/net-microwave-1.jpg", caption: "Foto 1: Pemasangan fisik antena microwave pada mounting tower/rooftop." },
+          { src: "assets/img/portfolio/net-microwave-2.jpg", caption: "Foto 2: Proses pointing antena dan pengukuran level sinyal RSSI/SNR di lapangan." }
+        ],
+        overview: "Instalasi fisik, terminasi, dan penyesuaian arah (alignment) perangkat radio microwave untuk jalur komunikasi wireless backhaul berkecepatan tinggi.",
+        challenge: "Memastikan jalur Line-of-Sight (LoS) bersih dan mendapatkan nilai Receive Signal Strength Indicator (RSSI) yang presisi sesuai link budget di tengah kondisi cuaca dan ketinggian lapangan.",
+        solutions: [
+          "Melakukan pemasangan bracket antena dan Outdoor Unit (ODU) dengan standar grounding dan waterproofing konektor.",
+          "Menarik kabel penghubung dari ODU ke Indoor Unit (IDU) di ruang perangkat.",
+          "Melakukan fine-tuning azimuth dan elevasi antena menggunakan multimeter/monitoring software hingga mencapai sinyal optimal."
+        ],
+        outcome: "Tautan wireless backhaul aktif dengan latensi rendah, throughput stabil sesuai kapasitas kontrak, dan bebas dari packet loss."
+      },
+      "structured-cabling": {
+        title: "Structured Cabling & Office Network Infrastructure",
+        category: "IT Support Specialist",
+        client: "Kantor Tata Kota / Local Urban Planning (Freelance)",
+        role: "Network & Cabling Installer",
+        tech: "UTP Cat6 Cabling, Patch Panel, Wallmount Rack, Fluke/LAN Cable Tester",
+        images: [
+          { src: "assets/img/portfolio/supp-cabling-1.jpg", caption: "Foto 1: Hasil terminasi patch panel dan manajemen kabel di dalam wallmount rack." },
+          { src: "assets/img/portfolio/supp-cabling-2.jpg", caption: "Foto 2: Proses penarikan jalur kabel terstruktur dan pengujian titik port jaringan." }
+        ],
+        overview: "Pembangunan infrastruktur jaringan fisik terstruktur untuk mendukung konektivitas workstation dan perangkat perkantoran.",
+        challenge: "Instalasi jaringan kantor lama yang tidak terpetakan menyulitkan pelacakan gangguan dan berisiko menyebabkan interferensi fisik maupun kerusakan konektor.",
+        solutions: [
+          "Melakukan penarikan kabel UTP melalui jalur pelindung (conduit/ducting) menuju setiap meja kerja.",
+          "Melakukan terminasi kabel pada modular jack dan patch panel secara berurutan.",
+          "Memberikan pelabelan fisik di kedua ujung kabel serta menguji seluruh titik koneksi menggunakan cable tester."
+        ],
+        outcome: "Seluruh titik jaringan berfungsi normal pada kecepatan Gigabit, mempermudah tim IT dalam melakukan pemeliharaan dan pelacakan port di masa depan."
+      },
+      "monitoring-system": {
+        title: "Proactive Infrastructure Monitoring (Zabbix & Grafana)",
+        category: "IT Infrastructure",
+        client: "Enterprise Production Environment",
+        role: "IT Infrastructure Engineer",
+        tech: "Zabbix, Grafana, SNMP, ICMP, Linux Monitoring Agent",
+        images: [
+          { src: "assets/img/portfolio/infra-monitoring-1.jpg", caption: "Foto 1: Dashboard Grafana menampilkan utilisasi bandwidth WAN, CPU, dan memori server." },
+          { src: "assets/img/portfolio/infra-monitoring-2.jpg", caption: "Foto 2: Tampilan trigger alert Zabbix untuk deteksi dini anomali perangkat jaringan." }
+        ],
+        overview: "Implementasi platform observabilitas terpusat untuk memantau kesehatan server, utilisasi bandwidth, dan status operasional perangkat jaringan secara real-time.",
+        challenge: "Tim operasional sebelumnya baru mengetahui adanya penurunan performa atau link terputus setelah menerima laporan keluhan dari pengguna akhir.",
+        solutions: [
+          "Mengonfigurasi Zabbix Server untuk mengumpulkan metrik via SNMP dari router/switch serta Zabbix Agent dari server Linux dan Windows.",
+          "Mengintegrasikan data Zabbix ke dalam dashboard visual Grafana untuk pemantauan kapasitas secara intuitif.",
+          "Mengatur threshold alerting otomatis untuk notifikasi dini saat beban CPU, disk, atau latensi link melewati batas normal."
+        ],
+        outcome: "Mempercepat waktu deteksi gangguan (MTTD) secara signifikan dan memungkinkan tindakan preventif sebelum berdampak pada pengguna operasional."
+      },
+      "corporate-vlan-wifi": {
+        title: "Corporate LAN, VLAN & Multi-Site Wi-Fi Architecture",
+        category: "Network Engineer",
+        client: "Purwadhika Digital School & PT Yektria Farma (Freelance)",
+        role: "Network Engineer",
+        tech: "MikroTik RouterOS, Managed Switch (802.1Q VLAN), Enterprise Access Points",
+        images: [
+          { src: "assets/img/portfolio/net-campus-1.jpg", caption: "Foto 1: Konfigurasi perangkat router dan managed switch pada rak distribusi." },
+          { src: "assets/img/portfolio/net-campus-2.jpg", caption: "Foto 2: Pemasangan titik Access Point di area operasional untuk cakupan sinyal merata." }
+        ],
+        overview: "Perancangan dan implementasi arsitektur jaringan LAN dan Wi-Fi untuk lingkungan perkantoran dan institusi pendidikan dengan kebutuhan akses multi-peran.",
+        challenge: "Memisahkan lalu lintas data sensitif milik staf/manajemen dari jaringan peserta didik atau tamu, sekaligus memastikan koneksi Wi-Fi tetap stabil saat digunakan puluhan perangkat secara bersamaan.",
+        solutions: [
+          "Merancang pembagian subnet dan VLAN (Management, Staff, Student/Guest, dan IoT/CCTV) pada managed switch dan router.",
+          "Menerapkan aturan firewall inter-VLAN routing untuk memblokir akses tidak sah antar segmen.",
+          "Menempatkan Access Point dengan pengaturan channel non-overlapping dan multi-SSID yang terikat langsung ke masing-masing VLAN."
+        ],
+        outcome: "Konektivitas jaringan berjalan stabil dan terisolasi dengan aman, menghilangkan kemacetan broadcast domain di seluruh area gedung."
+      },
+      "endpoint-sla": {
+        title: "Enterprise Endpoint Rollout & SLA Incident Management",
+        category: "IT Support Specialist",
+        client: "PT Saliman Riyanto Raharjo & PT Mitracomm Ekasarana",
+        role: "IT Support & Operations Specialist",
+        tech: "Windows/Linux OS Deployment, Active Directory, Ticketing System, Asset Inventory",
+        images: [
+          { src: "assets/img/portfolio/supp-endpoint-1.jpg", caption: "Foto 1: Proses staging dan standardisasi instalasi perangkat kerja sebelum distribusi." },
+          { src: "assets/img/portfolio/supp-endpoint-2.jpg", caption: "Foto 2: Dokumentasi pencatatan inventaris perangkat keras dan serah terima aset." }
+        ],
+        overview: "Pengelolaan siklus hidup perangkat pengguna akhir (end-user computing) dan penanganan insiden teknis harian bagi lebih dari 200 pengguna aktif.",
+        challenge: "Tingginya volume permintaan dukungan teknis harian serta kebutuhan mempercepat proses penyiapan perangkat bagi karyawan baru agar sesuai standar keamanan perusahaan.",
+        solutions: [
+          "Membuat standar prosedur instalasi (SOP) sistem operasi, aplikasi inti, dan konfigurasi keamanan endpoint.",
+          "Mengelola antrean tiket gangguan berdasarkan prioritas dampak bisnis untuk memenuhi target Service Level Agreement (SLA).",
+          "Menyelenggarakan edukasi teknis dasar bagi pengguna untuk mengurangi insiden berulang akibat kesalahan operasional."
+        ],
+        outcome: "Mencapai tingkat penyelesaian insiden sebesar 95% dalam batas waktu SLA dan menjaga kelancaran produktivitas lebih dari 200 pengguna."
+      },
+      "lab-server": {
+        title: "Educational Lab Server & Virtualization Deployment",
+        category: "IT Infrastructure",
+        client: "SMK Syubbanul Wathon (Magelang)",
+        role: "UPT Infrastructure Staff",
+        tech: "Linux/Windows Server, Virtualization, Local DNS/DHCP, Lab Switching",
+        images: [
+          { src: "assets/img/portfolio/infra-school-1.jpg", caption: "Foto 1: Perangkat server dan switch distribusi utama di ruang laboratorium." },
+          { src: "assets/img/portfolio/infra-school-2.jpg", caption: "Foto 2: Infrastruktur jaringan laboratorium untuk kegiatan praktikum dan ujian." }
+        ],
+        overview: "Perancangan dan pengelolaan server lokal serta jaringan pendukung untuk program keahlian Teknik Komputer & Jaringan serta Multimedia.",
+        challenge: "Keterbatasan perangkat keras fisik dibandingkan dengan kebutuhan lingkungan praktikum dan ujian berbasis komputer yang menuntut isolasi serta keandalan tinggi.",
+        solutions: [
+          "Membangun server virtualisasi untuk menjalankan berbagai layanan internal (file server, web server lokal, dan simulasi jaringan).",
+          "Mengonfigurasi jaringan laboratorium yang terhubung terpusat ke ruang server dengan manajemen bandwidth terukur.",
+          "Melakukan pemeliharaan berkala, pembaruan sistem, dan pencadangan data konfigurasi sebelum jadwal ujian."
+        ],
+        outcome: "Mendukung kelancaran kegiatan belajar mengajar dan pelaksanaan ujian berbasis komputer tanpa kendala kegagalan server."
+      },
+      "mikrotik-pcq": {
+        title: "Bandwidth Management & Traffic Shaping (MikroTik PCQ)",
+        category: "Network Engineer",
+        client: "Enterprise High-Density Network Optimization",
+        role: "Network Engineer",
+        tech: "MikroTik RouterOS, Mangle, Queue Tree, PCQ (Per Connection Queue)",
+        images: [
+          { src: "assets/img/portfolio/net-mikrotik-1.jpg", caption: "Foto 1: Konfigurasi Queue Tree dan PCQ rate pada Winbox untuk alokasi bandwidth adil." },
+          { src: "assets/img/portfolio/net-mikrotik-2.jpg", caption: "Foto 2: Grafik pemantauan traffic interface WAN saat beban 300+ pengguna aktif." }
+        ],
+        overview: "Optimalisasi distribusi bandwidth total 500 Mbps untuk melayani lebih dari 300 pengguna aktif secara bersamaan tanpa menimbulkan lonjakan latensi (bufferbloat).",
+        challenge: "Penggunaan bandwidth yang tidak terkontrol oleh sebagian kecil pengguna menyebabkan koneksi melambat drastis bagi pengguna lain yang membutuhkan akses aplikasi kerja real-time.",
+        solutions: [
+          "Mengidentifikasi dan menandai paket lalu lintas (Packet Marking) melalui Firewall Mangle berdasarkan segmen jaringan.",
+          "Menerapkan arsitektur Queue Tree yang dikombinasikan dengan metode Per Connection Queue (PCQ) untuk membagi kapasitas bandwidth secara dinamis dan merata.",
+          "Memberikan prioritas jalur (QoS) untuk protokol kritis seperti DNS, ICMP, dan aplikasi komunikasi bisnis."
+        ],
+        outcome: "Kapasitas 500 Mbps termanfaatkan secara optimal oleh 300+ pengguna aktif dengan ping stabil dan hilangnya keluhan koneksi lambat saat jam sibuk."
+      },
+      "incident-rca": {
+        title: "Network & Hardware Troubleshooting & RCA Standard",
+        category: "IT Support Specialist",
+        client: "Production & Multi-Site IT Operations",
+        role: "Network & Infrastructure Support",
+        tech: "Packet Analysis, Ping/Traceroute Diagnostics, Physical Layer Testing, RCA Documentation",
+        images: [
+          { src: "assets/img/portfolio/supp-rca-1.jpg", caption: "Foto 1: Proses penelusuran gangguan fisik port switch dan jalur kabel di lapangan." },
+          { src: "assets/img/portfolio/supp-rca-2.jpg", caption: "Foto 2: Dokumentasi topologi dan analisis akar masalah (Root Cause Analysis)." }
+        ],
+        overview: "Metodologi diagnosa gangguan jaringan dan perangkat keras secara sistematis di lingkungan produksi, dilengkapi dokumentasi Root Cause Analysis (RCA).",
+        challenge: "Gangguan jaringan intermiten sering kali hanya ditangani dengan me-restart perangkat tanpa menyelesaikan akar penyebabnya, sehingga masalah kembali terulang.",
+        solutions: [
+          "Menerapkan pendekatan isolasi masalah berlapis (OSI Layer 1 hingga Layer 7) mulai dari pengecekan kabel/port fisik, tabel ARP/routing, hingga firewall.",
+          "Mendokumentasikan setiap insiden mayor ke dalam laporan RCA yang mencakup kronologi, akar penyebab, tindakan perbaikan, dan langkah pencegahan.",
+          "Memperbarui diagram topologi jaringan setiap kali terjadi perubahan konfigurasi fisik maupun logis."
+        ],
+        outcome: "Mengurangi tingkat insiden berulang secara drastis dan mempercepat proses pemulihan layanan (MTTR) oleh seluruh anggota tim teknis."
+      }
+    };
+
+    // Ambil parameter 'project' dari URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectKey = urlParams.get('project') || 'iso-infra'; // Default ke proyek pertama jika dibuka langsung
+    const data = portfolioProjects[projectKey] || portfolioProjects['iso-infra'];
+
+    // Isi konten teks ke elemen HTML
+    document.title = `${data.title} - Mukhamad Anang Thoyfur`;
+    document.getElementById('breadcrumb-title').textContent = data.title;
+    document.getElementById('page-heading').textContent = data.title;
+    document.getElementById('project-title').textContent = data.title;
+    document.getElementById('project-overview').textContent = data.overview;
+    document.getElementById('project-challenge').textContent = data.challenge;
+    document.getElementById('project-outcome').textContent = data.outcome;
+
+    // Isi sidebar informasi proyek
+    document.getElementById('meta-category').textContent = data.category;
+    document.getElementById('meta-client').textContent = data.client;
+    document.getElementById('meta-role').textContent = data.role;
+    document.getElementById('meta-tech').textContent = data.tech;
+
+    // Isi daftar solusi teknis
+    const solutionList = document.getElementById('project-solution-list');
+    data.solutions.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      solutionList.appendChild(li);
+    });
+
+    // Isi slide gambar & keterangan foto di bawah gambar
+    const sliderWrapper = document.getElementById('project-slider-wrapper');
+    data.images.forEach(imgObj => {
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide text-center';
+      slide.innerHTML = `
+        <img src="${imgObj.src}" alt="${imgObj.caption}" class="img-fluid rounded">
+        <p class="mt-2 text-muted fst-italic small">${imgObj.caption}</p>
+      `;
+      sliderWrapper.appendChild(slide);
+    });
+  </script>
+
+  <!-- Main JS File (Dimuat setelah script dinamis agar Swiper membaca slide yang sudah dirender) -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
